@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Afrah's Birthday Surprise 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ffe6f7, #d0f4ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #4b0082;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      gap: 20px;
+      perspective: 1500px;
+    }
+
+    .card {
+      width: 200px;
+      height: 300px;
+      perspective: 1000px;
+      transition: transform 0.3s ease;
+      transform: rotateZ(var(--angle));
+    }
+
+    .card:hover {
+      transform: rotateZ(var(--angle)) scale(1.2);
+      z-index: 10;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card-front {
+      background-color: #ffcad4;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(80%);
+    }
+
+    .card-back {
+      background-color: #9efeff;
+      transform: rotateY(180deg);
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 15px;
+      flex-direction: column;
+      color: #333;
+    }
+
+    .card-back p {
+      margin: 10px 0;
+    }
+
+    .goofy-text {
+      font-size: 1.2rem;
+      transform: rotate(-3deg);
+      color: #ff5733;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Special Messages For You 💌</h1>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/22/audio_7d7a4dfae8.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card" style="--angle: -10deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 15.09.11_2cbb88f4.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">You bring joy like wild cards in UNO 💛</p>
+          <p class="goofy-text">Never a dull moment with you!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="--angle: -5deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 15.10.31_86d6209f.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">You make everyone feel special ✨</p>
+          <p class="goofy-text">Today’s your spotlight moment 💫</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="--angle: 0deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 15.10.31_e4b24ea0.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">Afrah = Sunshine + Sass ☀️🔥</p>
+          <p class="goofy-text">Keep slayin' like you always do!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" style="--angle: 5deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 15.26.22_847602e7.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">More laughs, memories & madness 🥳</p>
+          <p class="goofy-text">Cheers to the best year ahead 💐</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card" style="--angle: 10deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 15.26.22_67dd127f.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">📸 Your smile = instant serotonin</p>
+          <p class="goofy-text">Queen vibes only 👑</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+     <!-- Card 6 -->
+     <div class="card" style="--angle: 15deg;">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="C:/Users/ARYA SHINDE/OneDrive/Desktop/Bday/images/WhatsApp Image 2025-04-12 at 14.45.31_e3f34229.jpg" alt="Afrah's Pic">
+        </div>
+        <div class="card-back">
+          <p class="goofy-text">This one’s for the sweetest soul 💖</p>
+          <p class="goofy-text">Happy Birthday, Afrah! 🎂</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

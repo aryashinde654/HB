@@ -1,0 +1,93 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Afrah!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .card {
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #333;
+      padding: 30px;
+      transition: transform 0.8s;
+      cursor: pointer;
+      position: relative;
+    }
+    .btn {
+      margin-top: 20px;
+      display: none;
+      padding: 10px 20px;
+      background-color: #ff4b5c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .confetti {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: url('https://media.giphy.com/media/3o6ZsX2bR4vN66s8gk/giphy.gif') center/cover no-repeat;
+      opacity: 0.3;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti"></div>
+  <div class="card" onclick="nextMessage()">
+    <div id="message">Hey Afrah 👋</div>
+    <button class="btn" onclick="goToMain()" id="goBtn">Show me!</button>
+  </div>
+
+  <script>
+    const messages = [
+      "Hey Afrah 👋",
+      "Today’s all about you! 🎂",
+      "You're amazing, kind & so fun to be around 💖",
+      "Ready for a surprise? 🎁",
+      "Here's something special for you 💝"
+    ];
+
+    let index = 0;
+    function nextMessage() {
+      index++;
+      if(index < messages.length) {
+        document.getElementById('message').innerText = messages[index];
+      }
+      if(index === messages.length - 1) {
+        document.getElementById('goBtn').style.display = 'block';
+      }
+    }
+
+    function goToMain() {
+      window.location.href = 'main.html';
+    }
+  </script>
+</body>
+</html>
